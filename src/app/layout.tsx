@@ -6,6 +6,9 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+import NavbarUser from '@/app/Navbar';
+import FooterUser from '@/app/Footer';
+import { NextUIProvider } from "@nextui-org/react";
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -49,6 +52,8 @@ export const metadata: Metadata = {
   // ],
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -56,7 +61,13 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <NextUIProvider>
+          <NavbarUser />
+          <main>{children}</main>
+          <FooterUser />
+        </NextUIProvider>
+      </body>
     </html>
   );
 }
