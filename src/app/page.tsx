@@ -9,6 +9,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -58,6 +59,7 @@ export default function HomePage() {
               alt='Deploy with Vercel'
             />
           </UnstyledLink>
+          <h1>MANTAP SELALU</h1>
 
           <footer className='absolute bottom-2 text-gray-700'>
             © {new Date().getFullYear()} By{' '}
