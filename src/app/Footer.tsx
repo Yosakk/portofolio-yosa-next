@@ -1,7 +1,8 @@
+import ButtonLink from '@/components/links/ButtonLink';
 import React from 'react';
 import {
-  FaFacebookF,
-  FaTwitter,
+  FaWhatsapp,
+  FaMailBulk,
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
@@ -10,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-t from-black to-[#090f1d] text-white py-8">
-      <div className="container max-w-7xl  mx-auto px-4">
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
 
@@ -23,41 +24,46 @@ const Footer = () => {
             </div>
 
             <div className="flex space-x-4">
-              <a
-                href="https://facebook.com"
+              <ButtonLink
+                variant='ghost'
+                href="https://wa.me/6285337921513"
                 className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full"
                 aria-label="Facebook"
               >
-                <FaFacebookF />
-              </a>
-              <a
-                href="https://twitter.com"
+                <FaWhatsapp />
+              </ButtonLink>
+              <ButtonLink
+                variant='ghost'
+                href="mailto:bagasbrawijaya100@gmail.com"
                 className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full"
                 aria-label="Twitter"
               >
-                <FaTwitter />
-              </a>
-              <a
-                href="https://instagram.com"
+                <FaMailBulk />
+              </ButtonLink>
+              <ButtonLink
+                variant='ghost'
+                href="https://www.instagram.com/yosaabagas_/"
                 className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full"
                 aria-label="Instagram"
               >
                 <FaInstagram />
-              </a>
-              <a
-                href="https://linkedin.com"
+              </ButtonLink>
+              <ButtonLink
+                variant='ghost'
+                href="https://www.linkedin.com/in/yosa-bagas/"
                 className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn />
-              </a>
-              <a
-                href="https://github.com"
+              </ButtonLink>
+              <ButtonLink
+                variant='ghost'
+                href="https://github.com/Yosakk"
                 className="p-2 bg-gray-700 hover:bg-gray-600 rounded-full"
                 aria-label="GitHub"
               >
                 <FaGithub />
-              </a>
+              </ButtonLink>
             </div>
           </div>
 

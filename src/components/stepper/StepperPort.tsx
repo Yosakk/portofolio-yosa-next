@@ -22,7 +22,7 @@ export default function StepperPort() {
 
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="flex justify-center">
           <NextImage
             src={steps[activeStep].image}
@@ -30,6 +30,7 @@ export default function StepperPort() {
             width={400}
             height={400}
             className="shadow-2xl rounded-lg shadow-[#457086]"
+            classNames={{image: 'rounded-lg'}}
           />
         </div>
         <div className="relative space-y-8" ref={contentRef}>
@@ -42,7 +43,7 @@ export default function StepperPort() {
               )}
               <div
                 className="flex items-center cursor-pointer"
-                onClick={() => setActiveStep(index)}  // Set active step on click
+                onClick={() => setActiveStep(index)}
               >
                 <div
                   className={`w-8 h-8 flex items-center justify-center rounded-full text-white ${activeStep >= index ? 'bg-blue-600' : 'bg-gray-400'} transition-all duration-300`}
