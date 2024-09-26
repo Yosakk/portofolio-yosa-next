@@ -1,12 +1,13 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+const {nextui} = require("@nextui-org/react");
 
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
@@ -52,5 +53,6 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  darkMode: "class",
+  plugins: [nextui()],
 } satisfies Config;

@@ -6,6 +6,18 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+import NavbarUser from '@/app/Navbar';
+import FooterUser from '@/app/Footer';
+import { NextUIProvider } from "@nextui-org/react";
+
+import { Poppins } from 'next/font/google';
+import '@/styles/globals.css';
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'], // specify the weights you want to use
+  subsets: ['latin'], // specify the subsets you want to use
+  display: 'swap', // improves font loading behavior
+});
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -49,6 +61,8 @@ export const metadata: Metadata = {
   // ],
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -56,7 +70,13 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <NextUIProvider>
+          <NavbarUser />
+          <main>{children}</main>
+          <FooterUser />
+        </NextUIProvider>
+      </body>
     </html>
   );
 }
